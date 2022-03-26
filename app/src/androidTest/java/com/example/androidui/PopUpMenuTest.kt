@@ -9,12 +9,12 @@
 package com.example.androidui
 
 import android.support.test.rule.ActivityTestRule
-import androidx.test.runner.AndroidJUnit4
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.runner.AndroidJUnit4
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -23,7 +23,8 @@ import org.junit.runner.RunWith
 class PopUpMenuTest {
 
     @Rule
-    val popUpMenuActivityTestRule = ActivityTestRule<MainActivity>(MainActivity::class.java)
+    var activityActivityTestRule = ActivityTestRule(
+        MainActivity::class.java)
 
     @Test
     fun clickPopUpMenuButton_openMenu() {
